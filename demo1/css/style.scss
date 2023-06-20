@@ -1,0 +1,368 @@
+/*** The new CSS reset - version 1.8.4 (last updated 14.2.2023) ***/
+
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg*, symbol*)) {
+  all: unset;
+  display: revert;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+a,
+button {
+  cursor: revert;
+}
+ol,
+ul,
+menu {
+  list-style: none;
+}
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+table {
+  border-collapse: collapse;
+}
+input,
+textarea {
+  -webkit-user-select: auto;
+}
+textarea {
+  white-space: revert;
+}
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+:where(pre) {
+  all: revert;
+}
+::placeholder {
+  color: unset;
+}
+::marker {
+  content: initial;
+}
+:where([hidden]) {
+  display: none;
+}
+:where([contenteditable]:not([contenteditable="false"])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+:where([draggable="true"]) {
+  -webkit-user-drag: element;
+}
+:where(dialog:modal) {
+  all: revert;
+}
+
+a {
+  text-decoration: none;
+}
+body {
+  color: #222;
+  margin: 0;
+  line-height: 1.8;
+}
+//css reset end
+
+$size: 16px;
+$largeDesignSize: 1920;
+$pcDesignSize: 1366;
+$tabDesignSize: 769;
+$spDesignSize: 320;
+
+@function lvw($size: 16) {
+  $lvw: $size * (100 / $largeDesignSize) + vw;
+  @return $lvw;
+}
+@function vw($size: 16) {
+  $vw: $size * (100 / $pcDesignSize) + vw;
+  @return $vw;
+}
+@function tvw($size: 16) {
+  $tvw: $size * (100 / $tabDesignSize) + vw;
+  @return $tvw;
+}
+@function svw($size: 16) {
+  $svw: $size * (100 / $spDesignSize) + vw;
+  @return $svw;
+}
+@function ivw($size: 16) {
+  $ivw: $size * (100 / 1023) + vw;
+  @return $ivw;
+}
+
+//logo
+.logo {
+  position: fixed;
+  padding-top: 1vh;
+  padding-left: 6vw;
+  font-size: 48px;
+  z-index: 10001;
+}
+//left side bar
+.left_side_bar {
+  height: 100vh;
+  width: 50px;
+  position: fixed;
+  z-index: 10001;
+  top: 0;
+  left: 0;
+  padding-top: 40px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .left_copyright {
+    writing-mode: vertical-rl;
+    position: relative;
+  }
+  .fix_arrow {
+    position: absolute;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 50%;
+    bottom: -50%;
+    left: 3vw;
+    transition: 0.4s;
+  }
+}
+#section-scroller-button.rotate .fa-solid {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(180deg);
+  transition: 0.4s;
+}
+
+//right side bar
+.right_side_bar {
+  height: 100vh;
+  width: 150px;
+  position: fixed;
+  top: 0;
+  z-index: 10001;
+  right: 0;
+  padding-top: 40px;
+  background-color: transparent;
+  .text_content {
+    margin-bottom: 20vh;
+
+    a {
+      color: #222;
+    }
+  }
+  .sns_content {
+    margin-bottom: 35vh;
+  }
+  .sns_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .button {
+    a {
+      padding: 10px 20px;
+      color: #fff;
+      background: #222222;
+      border-radius: 20px;
+    }
+  }
+}
+
+.bg1 {
+  height: 100vh;
+  background: url(../img/top_bg.jpg);
+  position: relative;
+  z-index: -1;
+  .title {
+    position: absolute;
+    top: 45%;
+    left: 15%;
+    transform: translateY(-50%);
+    font-size: 87px;
+    font-weight: bold;
+  }
+}
+.bg2 {
+  height: 100vh;
+  background: #fff;
+}
+
+//hover section
+$color1: #f0d0d1;
+$color2: #ebfcf5;
+$color3: #ddd5d3;
+$color4: #efedd3;
+$color5: #d0bbbb;
+
+$light: #f4f5f0;
+$dark: #4c484f;
+
+$main-transition: all 0.6s ease-in-out;
+
+$font-serif: "Playfair Display", serif;
+$font-sans: "Cabin", sans-serif;
+
+$font-content: "Cabin", sans-serif;
+
+.navigation {
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  background-color: $color1;
+  transition: $main-transition;
+
+  .navArea {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+      text-align: left;
+
+      li {
+        list-style: none;
+        padding: 0.51vw 15vw;
+        display: inline-block;
+        width: 100%;
+
+        &:nth-child(1) {
+          &:before {
+            background-color: $color1;
+          }
+        }
+
+        &:nth-child(2) {
+          &:before {
+            background-color: $color2;
+          }
+        }
+
+        &:nth-child(3) {
+          &:before {
+            background-color: $color3;
+          }
+        }
+
+        &:nth-child(4) {
+          &:before {
+            background-color: $color4;
+          }
+        }
+
+        &:nth-child(5) {
+          &:before {
+            background-color: $color5;
+          }
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: greenyellow;
+          z-index: -1;
+          opacity: 0;
+          transition: $main-transition;
+        }
+
+        &:hover {
+          &:before {
+            opacity: 1;
+          }
+        }
+
+        a {
+          font-size: clamp(2rem, calc(12px + 4vw), 6rem);
+          font-style: normal;
+          line-height: 1.75;
+          text-decoration: none;
+          color: rgba(76, 72, 79, 0.65);
+          transition: $main-transition;
+          letter-spacing: 1px;
+
+          &:hover {
+            color: $dark;
+            font-style: italic;
+            letter-spacing: 1.5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.imgArea {
+  position: relative;
+  width: 50%;
+  height: 100vh;
+  background-color: greenyellow;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.menuToggle {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+
+.img-overlay {
+  background-color: $light;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.35;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .navigation .navArea {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .navigation .imgArea {
+    position: absolute;
+    width: 100%;
+  }
+
+  .navigation .navArea ul li:hover:before {
+    opacity: 0.55;
+  }
+
+  .img-overlay {
+    opacity: 0.8;
+  }
+}
+
+//slider
+
+/* CSS */
