@@ -10,8 +10,10 @@
       integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
       crossorigin="anonymous"
     />
-    <script defer src="./js/style.js"></script>
 
+    <script defer src="./js/style.js"></script>
+    <script defer src="./js/slider.js"></script>
+    <script defer src="./js/hambuger.js"></script>
     <script
       src="https://kit.fontawesome.com/55714a74d2.js"
       crossorigin="anonymous"
@@ -38,10 +40,48 @@
     <title>demo1</title>
   </head>
   <body>
+    <header>
+      <div class="burger">
+        <div class="burger__patty"></div>
+        <div class="burger__patty"></div>
+        <div class="burger__patty"></div>
+      </div>
+      <div class="menu">
+        <ul class="menu__list">
+          <li class="menu__item pb40">
+            <a href="" class="title">Top</a>
+          </li>
+          <li class="menu__item pb40">
+            <a href="" class="title">About Us</a>
+          </li>
+
+          <li class="menu__item pb40">
+            <a href="" class="title">Service</a>
+          </li>
+
+          <li class="menu__item pb40">
+            <a href="" class="title">Blog</a>
+          </li>
+
+          <li class="menu__item pb40">
+            <a href="" class="title">Contact</a>
+          </li>
+
+          <div class="menu__item sns_flex">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook"></i>
+          </div>
+          <p class="menu__item button">
+            <a href=""> CONTACT</a>
+          </p>
+        </ul>
+      </div>
+    </header>
     <div class="logo">logo</div>
     <div class="left_side_bar">
       <p class="left_copyright">
-        Copyright @ LOGO All Right Reserved.
+        <span class="copy_none">Copyright @ LOGO All Right Reserved.</span>
         <a id="section-scroller-button" href=""
           ><i class="fa-solid fa-arrow-down fix_arrow"></i
         ></a>
@@ -49,13 +89,13 @@
     </div>
     <div class="right_side_bar">
       <div class="wrap">
-        <div class="text_content">
-          <p><a href="#">Top</a></p>
-          <p><a href="#">About us</a></p>
-          <p><a href="#">Service</a></p>
-          <p><a href="#">Blog</a></p>
-          <p><a href="#">Contact</a></p>
-        </div>
+        <ul class="text_content SMN_effect-46">
+          <li><a href="#">Top</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
         <div class="sns_content">
           <i class="fa-brands fa-instagram"></i>
           <i class="fa-brands fa-twitter"></i>
@@ -63,7 +103,7 @@
         </div>
         <div class="button_content">
           <p class="button">
-            <a href="">CONTACT</a>
+            <a href=""> CONTACT</a>
           </p>
         </div>
       </div>
@@ -80,14 +120,23 @@
     <section class="bg2 section-scroll" id="section-2">
       <div class="inner">
         <div class="wrap">
-          <p class="sub_title"></p>
-          <h2 class="title"></h2>
-          <p class="content"></p>
-          <p class="content"></p>
-          <p class="button">
-            <a href=""></a>
+          <p class="page_cat">・About Us</p>
+          <h2 class="title">What we can do.</h2>
+          <p class="sub_title">
+            より良い社会のために、<br />私たちにできること。
           </p>
-          <img src="" alt="" />
+          <p class="content">
+            テキストテキストテキストテキストテキストテキストテキストテキスト<br />テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキス<br />トテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          </p>
+          <p class="content">
+            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br />テキストテキストテキストテキストテキスト
+          </p>
+          <p class="button">
+            <a href="">View More</a>
+          </p>
+          <figure>
+            <img src="http://via.placeholder.com/1000X350" alt="" />
+          </figure>
         </div>
       </div>
     </section>
@@ -97,41 +146,84 @@
           <div class="menuToggle"></div>
           <div class="navigation">
             <div class="navArea">
-              <ul>
-                <li>
-                  <a
-                    href="#"
-                    onmouseenter="changeImage('https://i.imgur.com/15u51cG.jpg')"
-                    >Home</a
-                  >
-                </li>
-                <li>
+              <ul class="nav_sp">
+                <li><a>Our Service</a></li>
+                <li class="content">
                   <a
                     href="#"
                     onmouseenter="changeImage('https://i.imgur.com/BPhlOhK.jpg')"
-                    >About</a
-                  >
+                    ><div class="slider_text_box">
+                      <div class="flex_box bt">
+                        <div class="col">
+                          <span class="num">01</span>
+                          <span class="content">開発事業</span>
+                        </div>
+                        <div class="col">
+                          <figure href="">
+                            <img src="./img/top_slider.png" alt="" />
+                          </figure>
+                        </div>
+                      </div></div
+                  ></a>
                 </li>
-                <li>
+                <li class="content">
                   <a
                     href="#"
                     onmouseenter="changeImage('https://i.imgur.com/VIQKJ9W.jpg')"
-                    >Shop</a
-                  >
+                    ><div class="slider_text_box">
+                      <div class="flex_box">
+                        <div class="col">
+                          <span class="num">02</span>
+                          <span class="content">開発事業</span>
+                        </div>
+                        <div class="col">
+                          <figure href="">
+                            <img src="./img/top_slider.png" alt="" />
+                          </figure>
+                        </div>
+                      </div></div
+                  ></a>
                 </li>
-                <li>
+                <li class="content">
                   <a
                     href="#"
                     onmouseenter="changeImage('https://i.imgur.com/A9m32sw.jpg')"
-                    >Gallery</a
-                  >
+                    ><div class="slider_text_box">
+                      <div class="flex_box">
+                        <div class="col">
+                          <span class="num">03</span>
+                          <span class="content">開発事業</span>
+                        </div>
+                        <div class="col">
+                          <figure href="">
+                            <img src="./img/top_slider.png" alt="" />
+                          </figure>
+                        </div>
+                      </div></div
+                  ></a>
                 </li>
-                <li>
+                <li class="content">
                   <a
                     href="#"
                     onmouseenter="changeImage('https://i.imgur.com/25Mo53M.jpg')"
-                    >Contact</a
-                  >
+                    ><div class="slider_text_box">
+                      <div class="flex_box">
+                        <div class="col">
+                          <span class="num">04</span>
+                          <span class="content">開発事業</span>
+                        </div>
+                        <div class="col">
+                          <figure href="">
+                            <img src="./img/top_slider.png" alt="" />
+                          </figure>
+                        </div>
+                      </div></div
+                  ></a>
+                </li>
+                <li class="button_area">
+                  <p class="button">
+                    <a href="">View more</a>
+                  </p>
                 </li>
               </ul>
             </div>
@@ -143,5 +235,223 @@
         </div>
       </div>
     </section>
+    <section id="section-4" class="slider section-scroll bg4">
+      <div class="slider_content">
+        <div class="more-slider">
+          <article class="content">
+            <div class="blog_box">
+              <h2 class="title">Blog</h2>
+              <p class="button">
+                <a href="#">View More<img src="" alt="" /></a>
+              </p>
+            </div>
+          </article>
+        </div>
+        <div class="slider-wrapper">
+          <div class="scroll-wrapper">
+            <ul class="row">
+              <li
+                class="slider"
+                style="
+                  left: -0%;
+                  -webkit-transition: left 1s;
+                  transition: left 1s;
+                "
+              >
+                <img
+                  src="http://via.placeholder.com/1000X630"
+                  alt="Architecture"
+                />
+                <div class="slider_box">
+                  <p class="content_title">
+                    ブログタイトルブログタイトルブログタイトルブログタイトル
+                  </p>
+                  <p class="content">
+                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…
+                  </p>
+                  <div class="content_flex">
+                    <p class="time">2023.06.12</p>
+                    <div class="SMN_effect-20">
+                      <a class="button_flex" href=""
+                        >View more<span
+                          ><img src="./img/top_icon004.png" alt="" /></span
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li
+                class="slider"
+                style="
+                  left: -0%;
+                  -webkit-transition: left 1s;
+                  transition: left 1s;
+                "
+              >
+                <img
+                  src="http://via.placeholder.com/1000X630"
+                  alt="Architecture"
+                />
+                <div class="slider_box">
+                  <p class="content_title">
+                    ブログタイトルブログタイトルブログタイトルブログタイトル
+                  </p>
+                  <p class="content">
+                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…
+                  </p>
+                  <div class="content_flex">
+                    <p class="time">2023.06.12</p>
+                    <div class="SMN_effect-20">
+                      <a class="button_flex" href=""
+                        >View more<span
+                          ><img src="./img/top_icon004.png" alt="" /></span
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li
+                class="slider"
+                style="
+                  left: -0%;
+                  -webkit-transition: left 1s;
+                  transition: left 1s;
+                "
+              >
+                <img
+                  src="http://via.placeholder.com/1000X630"
+                  alt="Architecture"
+                />
+                <div class="slider_box">
+                  <p class="content_title">
+                    ブログタイトルブログタイトルブログタイトルブログタイトル
+                  </p>
+                  <p class="content">
+                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…
+                  </p>
+                  <div class="content_flex">
+                    <p class="time">2023.06.12</p>
+                    <div class="SMN_effect-20">
+                      <a class="button_flex" href=""
+                        >View more<span
+                          ><img src="./img/top_icon004.png" alt="" /></span
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li
+                class="slider"
+                style="
+                  left: -0%;
+                  -webkit-transition: left 1s;
+                  transition: left 1s;
+                "
+              >
+                <img
+                  src="http://via.placeholder.com/1000X630"
+                  alt="Architecture"
+                />
+                <div class="slider_box">
+                  <p class="content_title">
+                    ブログタイトルブログタイトルブログタイトルブログタイトル
+                  </p>
+                  <p class="content">
+                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…
+                  </p>
+                  <div class="content_flex">
+                    <p class="time">2023.06.12</p>
+                    <div class="SMN_effect-20">
+                      <a class="button_flex" href=""
+                        >View more<span
+                          ><img src="./img/top_icon004.png" alt="" /></span
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li
+                class="slider"
+                style="
+                  left: -0%;
+                  -webkit-transition: left 1s;
+                  transition: left 1s;
+                "
+              >
+                <img
+                  src="http://via.placeholder.com/1000X630"
+                  alt="Architecture"
+                />
+                <div class="slider_box">
+                  <p class="content_title">
+                    ブログタイトルブログタイトルブログタイトルブログタイトル
+                  </p>
+                  <p class="content">
+                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…
+                  </p>
+                  <div class="content_flex">
+                    <p class="time">2023.06.12</p>
+                    <div class="SMN_effect-20">
+                      <a class="button_flex" href=""
+                        >View more<span
+                          ><img src="./img/top_icon004.png" alt="" /></span
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="slide-controls">
+        <span class="slider-previous"
+          ><i class="fa-solid fa-arrow-left"></i></span
+        ><span class="slider-next"
+          ><i class="fa-solid fa-arrow-right"></i
+        ></span>
+      </div>
+    </section>
+
+    <footer id="section-5" class="slider section-scroll bg5">
+      <div class="inner">
+        <div class="wrap">
+          <div class="cpa_section">
+            <h2 class="title">Contact</h2>
+            <p class="content">
+              当社へのご質問、商品についてなどお気軽にお問い合わせください。
+            </p>
+            <p class="button">
+              <a href="footer_logo">Contact</a>
+            </p>
+          </div>
+          <div class="flex_box">
+            <div class="col">
+              <p class="footer_logo">LOGO</p>
+            </div>
+            <div class="col">
+              <div class="category_flex">
+                <div class="cat_col">
+                  <p>Top</p>
+                  <p>About us</p>
+                  <p>Service</p>
+                  <p>Blog</p>
+                </div>
+                <div class="cat_col">
+                  <p>Contact</p>
+                  <p>Privacy Policy</p>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="bottom_copyright">Copyright @ LOGO All Right Reserved.</p>
+    </footer>
   </body>
 </html>
