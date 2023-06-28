@@ -78,6 +78,14 @@ body {
   margin: 0;
   line-height: 1.8;
 }
+.all_bg {
+  background: url(../img/top_bg.jpg) no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: -1;
+}
 //css reset end
 
 $size: 16px;
@@ -521,9 +529,9 @@ header {
 }
 
 .bg1 {
-  margin-bottom: 120px;
+  padding-bottom: 120px;
   height: 100vh;
-  background: url(../img/top_bg.jpg);
+
   position: relative;
   z-index: -1;
   .title {
@@ -780,7 +788,7 @@ header {
     gap: 3%;
     width: 100%;
     align-items: center;
-    background-color: #fff;
+
     transition: $main-transition;
 
     .navArea {
