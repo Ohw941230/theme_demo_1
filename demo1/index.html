@@ -40,419 +40,136 @@
     <title>demo1</title>
   </head>
   <body>
-    <section class="all_bg"></section>
-    <header>
-      <div class="burger">
-        <div class="burger__patty"></div>
-        <div class="burger__patty"></div>
-        <div class="burger__patty"></div>
-      </div>
-      <div class="menu">
-        <ul class="menu__list">
-          <li class="menu__item pb40">
-            <a href="" class="title">Top</a>
-          </li>
-          <li class="menu__item pb40">
-            <a href="" class="title">About Us</a>
-          </li>
+    <?php get_header(); ?>
 
-          <li class="menu__item pb40">
-            <a href="" class="title">Service</a>
-          </li>
-
-          <li class="menu__item pb40">
-            <a href="" class="title">Blog</a>
-          </li>
-
-          <li class="menu__item pb40">
-            <a href="" class="title">Contact</a>
-          </li>
-
-          <div class="menu__item sns_flex">
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-facebook"></i>
-          </div>
-          <p class="menu__item button">
-            <a href=""> CONTACT</a>
-          </p>
-        </ul>
-      </div>
-    </header>
-    <div class="logo">logo</div>
-    <div class="left_side_bar">
-      <p class="left_copyright">
-        <span class="copy_none">Copyright @ LOGO All Right Reserved.</span>
-        <a id="section-scroller-button" href=""
-          ><i class="fa-solid fa-arrow-down fix_arrow"></i
-        ></a>
-      </p>
-    </div>
-    <div class="right_side_bar">
-      <div class="wrap">
-        <ul class="text_content SMN_effect-46">
-          <li><a href="#">Top</a></li>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Service</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <div class="sns_content">
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-facebook"></i>
-        </div>
-        <div class="button_content">
-          <p class="button">
-            <a href=""> CONTACT</a>
-          </p>
-        </div>
-      </div>
-    </div>
-    <aside class="sidebar">
-      <div class="sidebar-inner">
-        <!-- SidebarContents -->
-      </div>
-    </aside>
-
-    <section class="bg1 section-scroll" id="section-1 ">
-      <h1 class="title">Solving social issues<br />with products.</h1>
-    </section>
-    <section class="bg2 section-scroll" id="section-2">
-      <div class="inner">
-        <div class="wrap">
-          <p class="page_cat">・About Us</p>
-          <h2 class="title">What we can do.</h2>
-          <p class="sub_title">
-            より良い社会のために、<br />私たちにできること。
-          </p>
-          <p class="content">
-            テキストテキストテキストテキストテキストテキストテキストテキスト<br />テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキス<br />トテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-          </p>
-          <p class="content">
-            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br />テキストテキストテキストテキストテキスト
-          </p>
-          <p class="button">
-            <a href="">View More</a>
-          </p>
-          <figure>
-            <img src="http://via.placeholder.com/1000X350" alt="" />
-          </figure>
-        </div>
+    <section id="s01">
+      <div class="container">
+        <figure>
+          <img src="/portfolio/wp-content/uploads/em_1.png" alt="" />
+        </figure>
+        <h2>remはなに??</h2>
+        <p class="text_start" style="margin-bottom: 30px">
+          HTMLで「html」または「body」にfont-sizeを指定しない場合、ブラウザは**デフォルトフォントサイズ(default
+          font size)**で16pxを使用します。<br />それで1rem = 16pxになります。<br />Chrome、Firefox、Safari、Edgeなどのモダンブラウザはすべてデフォルト値を16pxとしています。<br />16pxの
+          62.5% = 10pxになります。
+        </p>
+        <h2>h2:自分は3rem(30pxです)</h2>
+        <h3>h3:自分は2rem(20pxです)</h3>
+        <p style="margin-bottom: 40px">p:自分は1.6rem(16pxです)</p>
+        <h3>remの強み</h3>
+        <br />
+        <h4 style="font-weight: 400; margin-bottom: 40px">
+          1.デザインを統一しやすい！<br />ボタンやテキストの大きさをpxでバラバラに書くと管理が大変。<br />remならすべて同じ基準で作れるから、スッキリ＆統一感◎！<br /><br />2.レスポンシブ＆アクセシビリティに強い<br />ユーザーがブラウザで文字を大きくしても、<br />remを使っていれば全体のサイズも自然に大きくなります！<br /><br />3.後からサイズをまとめて変えられる<br />もし
+          html { font-size: 18px; } にしたら、<br />全体が自動でバランスよく大きくなる！1つの設定で全体管理ができる！
+        </h4>
+        <h3>remを使う時に注意点</h3>
+        <br />
+        <h4 style="font-weight: 400">
+          1.htmlの設定に全部が左右される<br />htmlの文字サイズを変えると、全体のサイズも変わってしまうので要注意。<br /><br />2.デザイナーはpxで作ってくることが多い<br />例えば、24pxを2.4remに毎回変換するのが面倒なときもある。<br /><br />3.1pxの線などには向いていない<br />すごく細かいサイズ（1pxのボーダーなど）にはremは不向き。
+          → この場合はpxを使った方がいい！
+        </h4>
       </div>
     </section>
-    <section class="bg3 section-scroll" id="section-3">
-      <div class="inner">
-        <div class="wrap">
-          <div class="menuToggle"></div>
-          <div class="navigation">
-            <div class="navArea">
-              <ul class="nav_sp">
-                <li><a>Our Service</a></li>
-                <li class="content">
-                  <a
-                    href="#"
-                    onmouseenter="changeImage('https://i.imgur.com/BPhlOhK.jpg')"
-                    ><div class="slider_text_box">
-                      <div class="flex_box bt">
-                        <div class="col">
-                          <span class="num">01</span>
-                          <span class="content">開発事業</span>
-                        </div>
-                        <div class="col">
-                          <figure href="">
-                            <img src="./img/top_slider.png" alt="" />
-                          </figure>
-                        </div>
-                      </div></div
-                  ></a>
-                </li>
-                <li class="content">
-                  <a
-                    href="#"
-                    onmouseenter="changeImage('https://i.imgur.com/VIQKJ9W.jpg')"
-                    ><div class="slider_text_box">
-                      <div class="flex_box">
-                        <div class="col">
-                          <span class="num">02</span>
-                          <span class="content">開発事業</span>
-                        </div>
-                        <div class="col">
-                          <figure href="">
-                            <img src="./img/top_slider.png" alt="" />
-                          </figure>
-                        </div>
-                      </div></div
-                  ></a>
-                </li>
-                <li class="content">
-                  <a
-                    href="#"
-                    onmouseenter="changeImage('https://i.imgur.com/A9m32sw.jpg')"
-                    ><div class="slider_text_box">
-                      <div class="flex_box">
-                        <div class="col">
-                          <span class="num">03</span>
-                          <span class="content">開発事業</span>
-                        </div>
-                        <div class="col">
-                          <figure href="">
-                            <img src="./img/top_slider.png" alt="" />
-                          </figure>
-                        </div>
-                      </div></div
-                  ></a>
-                </li>
-                <li class="content">
-                  <a
-                    href="#"
-                    onmouseenter="changeImage('https://i.imgur.com/25Mo53M.jpg')"
-                    ><div class="slider_text_box">
-                      <div class="flex_box">
-                        <div class="col">
-                          <span class="num">04</span>
-                          <span class="content">開発事業</span>
-                        </div>
-                        <div class="col">
-                          <figure href="">
-                            <img src="./img/top_slider.png" alt="" />
-                          </figure>
-                        </div>
-                      </div></div
-                  ></a>
-                </li>
-                <li class="button_area">
-                  <p class="button">
-                    <a href="">View more</a>
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <div class="imgArea">
-              <div class="img-overlay"></div>
-              <img src="https://i.imgur.com/15u51cG.jpg" alt="" id="slider" />
-            </div>
-          </div>
+    <section id="s02">
+      <div class="container">
+        <h2>emはなに??</h2>
+        <div style="margin-bottom: 20px">
+          <h3 class="high" st>
+            1.emはfont-sizeを指定する時は親基準、他の属性では自分自身のfont-size基準！
+          </h3>
         </div>
-      </div>
-    </section>
-    <section id="section-4" class="slider section-scroll bg4">
-      <div class="slider_content">
-        <div class="more-slider">
-          <article class="content">
-            <div class="blog_box">
-              <h2 class="title">Blog</h2>
-              <p class="button">
-                <a href="#">View More<img src="" alt="" /></a>
-              </p>
-            </div>
-          </article>
-        </div>
-        <div class="slider-wrapper">
-          <div class="scroll-wrapper">
-            <ul class="row">
-              <li
-                class="slider"
-                style="
-                  left: -0%;
-                  -webkit-transition: left 1s;
-                  transition: left 1s;
-                "
-              >
-                <img
-                  src="http://via.placeholder.com/1000X630"
-                  alt="Architecture"
-                />
-                <div class="slider_box">
-                  <p class="content_title">
-                    ブログタイトルブログタイトルブログタイトルブログタイトル
-                  </p>
-                  <p class="content">
-                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…
-                  </p>
-                  <div class="content_flex">
-                    <p class="time">2023.06.12</p>
-                    <div class="SMN_effect-20">
-                      <a class="button_flex" href=""
-                        >View more<span
-                          ><img src="./img/top_icon004.png" alt="" /></span
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-              </li>
+        <h4 style="margin-bottom: 20px">
+          以下のコードはどうなるのでしょうか？
+        </h4>
+        <section>
+          <h3>
+            &lt;h3&gt;自分は 親 font-size : 30pxです。<br />　　<span
+              >&lt;span&gt;<br />　　　自分は 子供です。 font-size : 0.5em;
+              padding : 1emです。<br />　　&lt;/span&gt;</span
+            ><br />&lt;/h3&gt;
+          </h3>
+        </section>
 
-              <li
-                class="slider"
-                style="
-                  left: -0%;
-                  -webkit-transition: left 1s;
-                  transition: left 1s;
-                "
-              >
-                <img
-                  src="http://via.placeholder.com/1000X630"
-                  alt="Architecture"
-                />
-                <div class="slider_box">
-                  <p class="content_title">
-                    ブログタイトルブログタイトルブログタイトルブログタイトル
-                  </p>
-                  <p class="content">
-                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…
-                  </p>
-                  <div class="content_flex">
-                    <p class="time">2023.06.12</p>
-                    <div class="SMN_effect-20">
-                      <a class="button_flex" href=""
-                        >View more<span
-                          ><img src="./img/top_icon004.png" alt="" /></span
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-              </li>
+        <div style="margin-bottom: 40px">
+          <style>
+            html body #s02 .container .parent {
+              font-size: 30px;
+            }
 
-              <li
-                class="slider"
-                style="
-                  left: -0%;
-                  -webkit-transition: left 1s;
-                  transition: left 1s;
-                "
-              >
-                <img
-                  src="http://via.placeholder.com/1000X630"
-                  alt="Architecture"
-                />
-                <div class="slider_box">
-                  <p class="content_title">
-                    ブログタイトルブログタイトルブログタイトルブログタイトル
-                  </p>
-                  <p class="content">
-                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…
-                  </p>
-                  <div class="content_flex">
-                    <p class="time">2023.06.12</p>
-                    <div class="SMN_effect-20">
-                      <a class="button_flex" href=""
-                        >View more<span
-                          ><img src="./img/top_icon004.png" alt="" /></span
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-
-              <li
-                class="slider"
-                style="
-                  left: -0%;
-                  -webkit-transition: left 1s;
-                  transition: left 1s;
-                "
-              >
-                <img
-                  src="http://via.placeholder.com/1000X630"
-                  alt="Architecture"
-                />
-                <div class="slider_box">
-                  <p class="content_title">
-                    ブログタイトルブログタイトルブログタイトルブログタイトル
-                  </p>
-                  <p class="content">
-                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…
-                  </p>
-                  <div class="content_flex">
-                    <p class="time">2023.06.12</p>
-                    <div class="SMN_effect-20">
-                      <a class="button_flex" href=""
-                        >View more<span
-                          ><img src="./img/top_icon004.png" alt="" /></span
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-
-              <li
-                class="slider"
-                style="
-                  left: -0%;
-                  -webkit-transition: left 1s;
-                  transition: left 1s;
-                "
-              >
-                <img
-                  src="http://via.placeholder.com/1000X630"
-                  alt="Architecture"
-                />
-                <div class="slider_box">
-                  <p class="content_title">
-                    ブログタイトルブログタイトルブログタイトルブログタイトル
-                  </p>
-                  <p class="content">
-                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…
-                  </p>
-                  <div class="content_flex">
-                    <p class="time">2023.06.12</p>
-                    <div class="SMN_effect-20">
-                      <a class="button_flex" href=""
-                        >View more<span
-                          ><img src="./img/top_icon004.png" alt="" /></span
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="slide-controls">
-        <span class="slider-previous"
-          ><i class="fa-solid fa-arrow-left"></i></span
-        ><span class="slider-next"
-          ><i class="fa-solid fa-arrow-right"></i
-        ></span>
-      </div>
-    </section>
-
-    <footer id="section-5" class="slider section-scroll bg5">
-      <div class="inner">
-        <div class="wrap">
-          <div class="cpa_section">
-            <h2 class="title">Contact</h2>
-            <p class="content">
-              当社へのご質問、商品についてなどお気軽にお問い合わせください。
-            </p>
-            <p class="button">
-              <a href="footer_logo">Contact</a>
-            </p>
-          </div>
-          <div class="flex_box">
-            <div class="col">
-              <p class="footer_logo">LOGO</p>
-            </div>
-            <div class="col">
-              <div class="category_flex">
-                <div class="cat_col">
-                  <p>Top</p>
-                  <p>About us</p>
-                  <p>Service</p>
-                  <p>Blog</p>
-                </div>
-                <div class="cat_col">
-                  <p>Contact</p>
-                  <p>Privacy Policy</p>
-                  <p></p>
-                </div>
+            html body #s02 .container .child {
+              font-size: 0.5em;
+              padding: 1em;
+              box-decoration-break: clone;
+            }
+          </style>
+          <div class="hidden_area">
+            <label for="label02">正解</label><br />
+            <input id="label02" type="checkbox" />
+            <div class="show-contents">
+              <div class="flex-hidden">
+                <h3>正解は font-size : 15px padding: 15pxです。</h3>
               </div>
             </div>
           </div>
         </div>
+        <div style="margin-bottom: 20px">
+          <h3 class="high">
+            2.emは重なる性質を持っているので使用に注意が必要！
+          </h3>
+        </div>
+        <h4 style="margin-bottom: 20px">
+          以下のコードはどうなるのでしょうか？
+        </h4>
+        <div style="font-size: 20px">
+          &lt;div class="pareant"&gt; 私は font-sizle20pxです。<br />
+          　　&lt;div class="child"&gt; 私は font-sizle 1.5emです。 paddingは
+          0.5emです。 <br />
+          　　　&lt;div class="grand_child"&gt; 私は
+          font-size2emです。paddingは1emです。
+          <br />　　　&lt;/div&gt;<br />　　&lt;/div&gt;<br />
+          &lt;/div&gt;
+        </div>
+
+        <div class="hidden_area">
+          <label for="label01">正解</label><br />
+          <input id="label01" type="checkbox" />
+          <div class="show-contents">
+            <div class="flex-hidden">
+              <h3 style="margin-top: 30px">
+                正解は　.child : font-size 30px padding : 15px ,<br />
+                .grand_child : font-size : 60px, padding : 60pxです。
+              </h3>
+            </div>
+          </div>
+        </div>
+        <h3>emの強み</h3>
+        <br />
+        <h4 style="font-weight: 400; margin-bottom: 40px">
+          1.柔軟なレイアウト<br />emは相対的な単位なので、親要素のfont-sizeに比例してサイズが変更されます。これにより、レスポンシブデザインにとても便利です。たとえば、親要素のfont-sizeを変更すると、子要素のサイズも自動的に変更されるため、レイアウトを簡単に変更できます。<br /><br />2.フォントサイズの調整<br />emを使うことで、フォントサイズを相対的に設定でき、アクセシビリティが向上します。たとえば、ユーザーがブラウザでデフォルトのフォントサイズを変更すると、emを使ったテキストはその変更に比例して大きくなったり小さくなったりするため、ユーザーにとってより良い体験を提供できます。<br /><br />3.レスポンシブデザイン<br />emを使うと、すべての要素のサイズを比例的に調整できるため、異なる画面サイズに合わせて柔軟なデザインを作成できます。例えば、emを使ってパディングやマージン、フォントサイズを設定すると、画面サイズが変わるたびに自然にサイズが調整されます。
+        </h4>
+        <h3>emを使う時に注意点</h3>
+        <br />
+        <h4 style="font-weight: 400; margin-bottom: 40px">
+          1.ネストされたemの計算<br />emは継承されて計算されるため、ネストが深くなるほど、予期しない大きな値が計算されることがあります。例えば、子要素のフォントサイズが親要素のfont-sizeに比例して大きくなるのですが、その中にさらに子要素がある場合、その子要素は親要素のサイズに比例してさらに大きくなるため、計算が複雑になることがあります。<br /><br />2.不規則なサイズの変化<br />emを多用すると、デザインが不規則に変化することがあります。例えば、padding、margin、font-sizeなどをすべてemで設定していると、ブラウザのデフォルトのfont-sizeが異なる場合、予期した通りにデザインが変わらないことがあります。特に、emを多用してネストすると、レイアウトのサイズが不規則に変わる可能性があるため、注意が必要です。<br /><br />3.他の単位との混在による混乱<br />emとpx、remなどを混ぜて使うと、予期せぬ動作をすることがあります。pxは絶対的なサイズ単位で、remはルート要素（html）のfont-sizeを基準にする相対単位です。このように、emと異なる単位を組み合わせて使うと、相対基準が異なるため、予期しない結果が生じることがあります。<br /><br />ユーザーのデフォルトフォントサイズ<br />emはユーザーのデフォルトフォントサイズを基準にするため、デフォルトのフォントサイズが大きすぎると、サイト全体が予想以上に大きくなったり小さくなったりすることがあります。たとえば、ユーザーがブラウザでフォントサイズを変更した場合、emを使ったすべての要素がその変更に基づいてサイズが調整されます。
+        </h4>
       </div>
-      <p class="bottom_copyright">Copyright @ LOGO All Right Reserved.</p>
-    </footer>
+    </section>
+    <section id="s03">
+      <div class="container">
+        <h2>まとめ</h2>
+        <h4>
+          <b>・rem</b
+          >は、htmlまたはbodyのfont-sizeを基準にして、全体的なサイズを統一できます。<br />レスポンシブデザインやアクセシビリティに優れ、後から一括で調整できます。<br /><br /><b
+            >・em</b
+          >は、親要素のfont-sizeを基準にして柔軟なレイアウトが可能ですが、自己のフォントサイズも影響するため、paddingやmarginに予期しない変化が生じることがあります。<br />特にネストが深くなると、サイズが重なって計算が複雑になりやすいので注意が必要です。
+        </h4>
+      </div>
+    </section>
+
+    <script
+      defer
+      src="<?php echo get_template_directory_uri(); ?>/assets/js/front.js"
+    ></script>
+    <?php get_footer(); ?>
   </body>
 </html>
